@@ -2,10 +2,11 @@ const express=require("express")
 const path=require("path")
 const hbs=require("hbs")
 const app=express()
-const port=process.env.PORT || 3000
+const port=process.env.PORT || 4000
 
 // template engine
-app.set("views",path.join((__dirname,"../templates/views")))
+
+app.set("views",path.join((__dirname,"./templates/views")))
 app.set("view engine","hbs")
 // partial path
 hbs.registerPartials(path.join(__dirname,"../templates/partial"))
@@ -24,6 +25,10 @@ app.get("/about",(req,res)=>{
 
 app.get("/weather",(req,res)=>{
     res.render("weather")
+})
+
+app.get("/link",(req,res)=>{
+    res.render("link")
 })
 
 app.get("*",(req,res)=>{
