@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "nodemon exec -e js,hbs src/app.js"
+    "dev": "nodemon exec -e js,hbs src/app.js",
+    "start":"node src/app.js"
     
   },
   "author": "ankit sarangi",
